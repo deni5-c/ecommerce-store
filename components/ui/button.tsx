@@ -14,11 +14,12 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
 }, ref) => {
     return (
         <button
-            ref={ref}
             className={cn(
                 'w-auto rounded-full bg-black px-5 py-3 disabled:cursor-not-allowed disables:opacity-50 text-white font-semibold hover:opacity-75 transition',
                 className
             )}
+            ref={ref}
+            {...props}
         >
             {children}
         </button>
